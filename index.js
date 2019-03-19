@@ -55,18 +55,16 @@ function main() {
         userDetails = result;
         console.log("Initialized user details");
         // Use user details from here
-        console.log(userDetails)
+        console.log(userDetails[0].id)
     }, function(err) {
         console.log(err);
     }).then(function(result) {
-        // Print the code activity. Prints 110
         console.log(userDetails[0].name);
     }).then(function(result) {
             var initializePromiseGetPost = getPosts(userDetails[0].id);
             initializePromiseGetPost.then(function(result) {
             postDetails = result;
             console.log("Initialized post details");
-            // Use user details from here
             console.log(postDetails.title)
         }, function(err) {
             console.log(err);
