@@ -2,6 +2,8 @@ var request = require('request');
 var http = require('http');
 var timers = require('timers');
 
+// Source - https://medium.com/dev-bits/writing-neat-asynchronous-node-js-code-with-promises-32ed3a4fd098
+
 var userDetails;
 var postDetails;
 
