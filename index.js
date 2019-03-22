@@ -8,7 +8,6 @@ var userDetails;
 var postDetails;
 
 function postRequest(){
-
     var options = {
         url: "https://jsonplaceholder.typicode.com/posts",
         headers: {
