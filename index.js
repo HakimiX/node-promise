@@ -7,6 +7,32 @@ var timers = require('timers');
 var userDetails;
 var postDetails;
 
+function postRequest(){
+
+    var options = {
+        url: "https://jsonplaceholder.typicode.com/posts",
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+        },
+        body: JSON.stringify({
+            title: 'foo',
+            body: 'bar',
+            userId: 1
+        })
+    };
+
+    return new Promise(function (resolve, reject) {
+        request.post(options, function(err, resp, body) {
+            if(err){
+                reject(err);
+            } else {
+                console.log('POST request successful')
+                console.log(body)
+            }
+        })
+    })
+}
+
 function getUsers() {
     // Setting URL and headers for request
     var options = {
